@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "EmployeeDetails";
+}
+
+<h1>EmployeeDetails</h1>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td> Enter your ID</td>
+            <td>
+                @Html.TextBox("ID")
+
+            </td>
+        </tr>
+        <tr>
+            <td> Enter your name</td>
+            <td>
+                @Html.TextBox("Username")
+
+            </td>
+        </tr>
+        <tr>
+            <td> Select Gender</td>
+            <td>
+                @Html.RadioButton("gender","Male") Male
+                @Html.RadioButton("gender","Female") Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select Department</td>
+            <td>
+                @Html.DropDownList("department")
+            </td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>
+                @Html.TextBox("salary")
+            </td>
+        </tr>
+        <tr>
+            <td> Select Skills</td>
+            <td>
+                <input type="checkbox" name="Skills" value="C#" /> C#
+                <input type="checkbox" name="Skills" value="SQl" /> SQL
+                <input type="checkbox" name="Skills" value="HTML" /> HTML
+                <input type="checkbox" name="Skills" value="CSS" /> CSS
+                <input type="checkbox" name="Skills" value="JavaScript" /> JavaScript
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>Select City</td>
+            <td>
+                @Html.DropDownList("city")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+
+            <td>
+                <input type="submit" value="Save" />
+            </td>
+        </tr>
+
+
+    </table>
+}
+
